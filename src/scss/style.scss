@@ -20,11 +20,31 @@ header {
         font-size: ($spacer * 3);
         text-shadow: 0px 3px 2px rgba(0,0,0,0.95)!important;
     }
+    .header-image {
+        background-image: url(../image/video-portal-banner.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        padding: 10rem 0;
+    }
 }
 main {
     .button-group {
         margin-top: ($spacer * 4);
         margin-bottom: ($spacer * 2);
+        & {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            flex-direction: row;
+            @include media-breakpoint-down(sm) {
+                flex-direction: column;
+                a {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
         .btn:focus {
             outline: none;
             box-shadow: none;
