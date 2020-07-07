@@ -1,0 +1,119 @@
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+$theme-colors: (
+  "primary": #038ab9,
+  "danger": #ff4136
+);
+
+$font-family-base: 'Raleway', sans-serif;
+@import "~bootstrap";
+
+a:hover {
+    text-decoration: none;
+}
+
+header {
+    h1 {
+        font-size: ($spacer * 3);
+        text-shadow: 0px 3px 2px rgba(0,0,0,0.95)!important;
+    }
+}
+main {
+    .button-group {
+        margin-top: ($spacer * 4);
+        margin-bottom: ($spacer * 2);
+        .btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        .btn {
+            border-color: #000;
+            &:hover {
+                background-color: $primary;
+                border-color: $white;
+                color: $white;
+            }
+        }
+    }
+    #video {
+        .post-date,
+        .item-count {
+            font-weight: $font-weight-bold;
+            color: $text-muted;
+        }
+    }
+}
+.list-grid-toggle {
+    .btn:focus {
+        box-shadow: none;
+        color: $primary;
+    }
+    i:hover {
+        color: $primary;
+    }
+}
+
+.view-group {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.thumbnail {
+  margin-bottom: 30px;
+  padding: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.list-group-item-heading {
+    color: $dark;
+    font-size: ($spacer * 1.6);
+    font-weight: $font-weight-bolder;
+}
+.list-group-item-text {
+    font-size: ($spacer * 0.8);
+    font-weight: 600;
+}
+
+.item.list-group-item {
+  float: none;
+  width: 100%;
+  background-color: $white;
+  margin-bottom: 30px;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+  border: 0;
+  .img-event {
+    float: left;
+    width: 30%;
+  }
+  .list-group-image {
+    margin-right: 10px;
+  }
+  .thumbnail {
+    margin-bottom: 0px;
+    display: inline-block;
+  }
+  .caption {
+    float: left;
+    width: 70%;
+    margin: 0;
+  }
+  &::before,
+  &::after {
+    display: table;
+    content: " ";
+  }
+  &::after {
+    clear: both;
+  }
+}
